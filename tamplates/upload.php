@@ -1,7 +1,7 @@
 <?php
 $conn = connectSQL();
 
-if (isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id'])) {
     header("Location: ?page=sign-up");
     exit();
 }
